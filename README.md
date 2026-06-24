@@ -53,12 +53,7 @@ fraud-detection/
 └── pom.xml
 ```
 
----
-- [x] Block 1: Header & Tech-Stack
-- [ ] Block 2: Architektur (Mermaid)
-- [ ] Block 3: Installation & Config
-- [ ] Block 4: API & Nutzung
-- [ ] Block 5: Contribution & Lizenz
+
 ## 🏗️ Architektur & Systemdesign
 
 ### Systemarchitektur
@@ -143,12 +138,7 @@ flowchart TD
 | 3 | **Velocity** | Zu viele Transaktionen in kurzer Zeit | > 5 Transaktionen in 5 Min. |
 | 4 | **Risiko-Länder** | Herkunftsland auf der Blacklist | RU, NG, UA, PK |
 
----
-- [x] Block 1: Header & Tech-Stack
-- [x] Block 2: Architektur (Mermaid)
-- [ ] Block 3: Installation & Config
-- [ ] Block 4: API & Nutzung
-- [ ] Block 5: Contribution & Lizenz
+
 ## ⚙️ Installation & Konfiguration
 
 ### Systemvoraussetzungen
@@ -231,12 +221,7 @@ mvn clean package -DskipTests
 mvn spring-boot:run
 ```
 
----
-- [x] Block 1: Header & Tech-Stack
-- [x] Block 2: Architektur (Mermaid)
-- [x] Block 3: Installation & Config
-- [ ] Block 4: API & Nutzung
-- [ ] Block 5: Contribution & Lizenz
+
 ## 🚀 Nutzung & API-Referenz
 
 Sobald die Anwendung läuft, ist die interaktive API-Dokumentation über **Swagger UI** erreichbar:
@@ -306,9 +291,31 @@ docker exec -it fraud-kafka kafka-console-consumer --bootstrap-server localhost:
 docker exec -it fraud-kafka kafka-console-consumer --bootstrap-server localhost:9092 --topic safe-transactions --from-beginning
 ```
 
----
-- [x] Block 1: Header & Tech-Stack
-- [x] Block 2: Architektur (Mermaid)
-- [x] Block 3: Installation & Config
-- [x] Block 4: API & Nutzung
-- [ ] Block 5: Contribution & Lizenz
+## 🤝 Contribution & Lizenz
+
+### 1. Tests ausführen
+Das Projekt enthält Unit- und Integrationstests für die REST-Controller sowie für die Kafka-Streams-Topologie. Du kannst die Testsuite mit folgendem Maven-Befehl starten:
+
+```bash
+mvn test
+```
+
+### 2. Contribution Guidelines
+Beiträge zur Erweiterung des Fraud-Detection-Systems sind jederzeit willkommen! Wenn du neue Betrugsregeln (z.B. Machine-Learning-Modelle) hinzufügen möchtest, folge bitte diesen Schritten:
+
+1. **Forke** das Repository.
+2. Erstelle einen neuen Feature-Branch (`git checkout -b feature/neue-betrugsregel`).
+3. Implementiere deine Änderungen nach SOLID-Prinzipien.
+4. Stelle sicher, dass alle Tests grün sind.
+5. Committe deine Änderungen (`git commit -m 'Add new velocity rule'`).
+6. Pushe den Branch (`git push origin feature/neue-betrugsregel`).
+7. Erstelle einen **Pull Request**.
+
+### 3. Lizenz
+Dieses Projekt ist unter der **MIT-Lizenz** lizenziert. Siehe die [LICENSE](LICENSE) Datei für Details.
+
+### 4. Kontakt & Autoren
+- **Entwickler:** RobTech / com.robtech
+- **Projekt-Link:** [https://github.com](https://github.com)
+
+
